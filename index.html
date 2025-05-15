@@ -82,101 +82,10 @@
         <input type="number" id="hscMarks" placeholder="Enter HSC Marks" max="1100" min="0">
         <p class="info-text">(Without 4th subject)</p> <!-- Added additional text for HSC -->
         
-  <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #222;
-        }
-        
-        .submit-btn {
-            position: relative;
-            padding: 12px 24px;
-            font-family: 'Arial', sans-serif;
-            font-weight: bold;
-            font-size: 16px;
-            color: #1e90ff; /* Blue text on white */
-            background-color: #ffffff;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            outline: none;
-            z-index: 1;
-            overflow: hidden;
-            box-shadow: none;
-        }
-        
-        .submit-btn::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            border-radius: 25px;
-            background: linear-gradient(45deg, 
-                #ff0000, #ff7300, #fffb00, #48ff00, 
-                #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-            background-size: 400%;
-            z-index: -1;
-            opacity: 0;
-            transition: 0.5s;
-            animation: rgb-border 20s linear infinite;
-        }
-        
-        .submit-btn:hover {
-            color: white;
-            /* Shadow effect - now with RGB colors that match the border */
-            box-shadow: 0 0 15px rgba(30, 144, 255, 0.7),
-                        0 0 30px rgba(0, 255, 213, 0.5),
-                        0 0 45px rgba(122, 0, 255, 0.3);
-        }
-        
-        .submit-btn:hover::before {
-            opacity: 1;
-        }
-        
-        .submit-btn:active {
-            transform: scale(0.98);
-            /* More intense shadow when clicked */
-            box-shadow: 0 0 20px rgba(30, 144, 255, 0.9),
-                        0 0 40px rgba(0, 255, 213, 0.7),
-                        0 0 60px rgba(122, 0, 255, 0.5);
-        }
-        
-        @keyframes rgb-border {
-            0% {
-                background-position: 0 0;
-            }
-            50% {
-                background-position: 400% 0;
-            }
-            100% {
-                background-position: 0 0;
-            }
-        }
-    </style>
-</head>
-<body>
-    <button class="submit-btn" type="submit">Calculate</button>
+          <button onclick="calculateMarks()">
+            <i class="fas fa-calculator"></i> Calculate
+        </button>
 
-    <script>
-        // Enhanced click effect with shadow
-        document.querySelector('.submit-btn').addEventListener('click', function() {
-            this.style.transform = 'scale(0.98)';
-            this.style.boxShadow = '0 0 25px rgba(30, 144, 255, 1), 0 0 50px rgba(0, 255, 213, 0.8), 0 0 75px rgba(122, 0, 255, 0.6)';
-            
-            setTimeout(() => {
-                this.style.boxShadow = '0 0 15px rgba(30, 144, 255, 0.7), 0 0 30px rgba(0, 255, 213, 0.5), 0 0 45px rgba(122, 0, 255, 0.3)';
-            }, 300);
-        });
-    </script>
-       
 
 
         
